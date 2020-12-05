@@ -69,14 +69,4 @@ const TodoForm = () => {
   );
 };
 
-// export const getServerSideProps = wrapper.getServerSideProps(
-//   async (context) => {
-//     context.store.dispatch({
-//       type: LOAD_POST_REQUEST,
-//     });
-//     context.store.dispatch(END);
-//     await context.store.sagaTask.toPromise();
-//   }
-// );
-
 export default TodoForm;

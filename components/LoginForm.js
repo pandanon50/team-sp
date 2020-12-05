@@ -37,7 +37,6 @@ const LoginForm = () => {
 
   const onSubmitForm = useCallback(() => {
     dispatch(loginRequestAction({ email, password }));
-    //setIsLoggedIn(true);
   }, [email, password]);
 
   return (

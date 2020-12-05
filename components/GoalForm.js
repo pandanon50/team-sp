@@ -35,8 +35,6 @@ const LoginForm = () => {
 
   const toggleChecked = useCallback(() => {
     setChecked((prev) => !prev);
-    console.log(checked);
-    console.log(everydayCount);
     if (everydayCount) {
       setCheckTotal(everydayCount);
     }
@@ -80,7 +78,6 @@ const LoginForm = () => {
         },
       });
     }
-    //setIsLoggedIn(true);
   }, [goalTitle, checkTotal, startLine, endLine, everydayCount]);
 
   return (

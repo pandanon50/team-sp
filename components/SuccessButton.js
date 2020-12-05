@@ -12,7 +12,6 @@ const SuccessButton = ({ props }) => {
   const confirm = (e) => {
     message.success("Click on Yes");
     setSuccess(true);
-    console.log(props);
     dispatch({
       type: GOAL_CHECK_REQUEST,
       data: props,

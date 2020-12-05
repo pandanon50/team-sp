@@ -19,24 +19,6 @@ const user = () => {
     (state) => state.user
   );
 
-  // useEffect(() => {
-  //   if (me && me.id) {
-  //     Router.replace("/");
-  //   }
-  // }, [me && me.id]);
-
-  // useEffect(() => {
-  //   if (signUpDone) {
-  //     Router.replace("/");
-  //   }
-  // }, [signUpDone]);
-
-  // useEffect(() => {
-  //   if (signUpError) {
-  //     alert(signUpError);
-  //   }
-  // }, [signUpError]);
-
   const [email, onChangeEmail] = useInput("");
   const [nickname, onChangeNickname] = useInput("");
   const [password, onChangePassword] = useInput("");

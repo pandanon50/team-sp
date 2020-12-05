@@ -32,7 +32,6 @@ const Todo = () => {
     addPostDone,
     checkDone,
   } = useSelector((state) => state.post);
-  console.log(todos);
 
   const showModal = () => {
     setVisible(true);

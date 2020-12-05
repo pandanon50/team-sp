@@ -36,10 +36,6 @@ const month = () => {
   }, []);
 
   useEffect(() => {
-    // if (!me) {
-    //   message.error("로그인이 필요합니다");
-    //   Router.replace("/user");
-    // }
     dispatch({ type: LOAD_DATE_POST_REQUEST, data: value.format("YYYYMMDD") }); //달력 클릭하면 나오는 액션 만들기
   }, []);
 

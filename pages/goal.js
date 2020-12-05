@@ -21,10 +21,6 @@ const Goal = () => {
   );
 
   useEffect(() => {
-    // if (!me) {
-    //   message.error("로그인이 필요합니다");
-    //   Router.replace("/user");
-    // }
     dispatch({
       type: LOAD_GOAL_REQUEST,
     });

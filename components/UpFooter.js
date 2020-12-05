@@ -27,24 +27,27 @@ const UpFooter = () => {
 
   const handleOk = async () => {
     setVisible(false);
-    const e = UpdateSpeech(ret);
-    // console.log(UpdateSpeech(ret));
+    const speechItem = UpdateSpeech(ret);
     if (e != null) {
-      const hi = dispatch(e);
+      const dispatchItem = dispatch(speechItem); // 음성인식별 dispatch
+
       // 모든 today 읽어주기
-      if (hi.type === LOAD_DATE_POST_REQUEST) {
-        await Axios.post("/posts", { month: hi.data }).then((result) => {
-          // console.log(result);
-          if (result.data.length !== 0) {
-            let a = result.data.length;
-            for (let i = 0; i < a; i++) {
-              SpeechText(result.data[i].content);
+      if (dispatchItem.type === LOAD_DATE_POST_REQUEST) {
+        await Axios.post("/posts", { month: dispatchItem.data }).then(
+          // dispatch 한 후에 음성 읽어주기!
+          (result) => {
+            // console.log(result);
+            if (result.data.length !== 0) {
+              let a = result.data.length;
+              for (let i = 0; i < a; i++) {
+                SpeechText(result.data[i].content);
+              }
+              SpeechText("일정이 있습니다.");
+            } else {
+              SpeechText("일정이 없습니다.");
             }
-            SpeechText("일정이 있습니다.");
-          } else {
-            SpeechText("일정이 없습니다.");
           }
-        });
+        );
       }
     } else {
       message.error("수행할 기능이 없습니다.");
@@ -54,6 +57,7 @@ const UpFooter = () => {
   };
 
   const handleCancel = () => {
+    // 음성인식 stop
     if (typeof window !== "undefined") {
       recognition.stop();
     }
@@ -74,6 +78,7 @@ const UpFooter = () => {
   };
 
   if (typeof window !== "undefined") {
+    //recognition 파일 인식 하기
     recognition.onend = () => {
       setStr(ret);
     };
@@ -105,12 +110,6 @@ const UpFooter = () => {
             <div>{str}</div>
           </Modal>
           <AudioOutlined onClick={showModal} />
-
-          {/* <Link href="/goal">
-                  <a>
-                    
-                  </a>
-                </Link> */}
         </li>
         <li className="footer-list__item">
           <Link href="/user">

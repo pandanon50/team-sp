@@ -14,25 +14,6 @@ const todayString = (num) => {
   else return "Sunday";
 };
 
-// const TitleDiv = styled.div`
-//   width: 100%;
-//   background-color: white;
-//   margin: 15px;
-// `;
-
-// const TodaysDiv = styled.div`
-//   font-size: 22px;
-//   color: #595959;
-//   font-weight: 600;
-// `;
-
-// const DateDiv = styled.div`
-//   display: flex;
-//   font-size: 21px;
-//   color: #2f54eb;
-//   font-weight: 600;
-// `;
-
 const Today = () => {
   return (
     <div style={{ width: "100%", backgroundColor: "white", padding: "15px" }}>

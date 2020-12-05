@@ -33,10 +33,6 @@ const GoalItem = ({ goal }) => {
       data: id,
     });
   }, []);
-
-  // const Icon = () => {
-  //   return "👉";
-  // };
   return (
     <div>
       <Global />

@@ -1,6 +1,5 @@
 import React, { useCallback, useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import moment from "moment";
 import { useDispatch, useSelector } from "react-redux";
 import {
   MinusCircleOutlined,
@@ -38,7 +37,6 @@ const TodoItem = ({ post, month }) => {
   const onToggle = useCallback(() => {
     if (!month) {
       setEnd((prev) => !prev);
-      console.log(id, end);
       dispatch({
         type: CHECKED_POST_REQUEST,
         data: { checked: !checked, postId: id },
