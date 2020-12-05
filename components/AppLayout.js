@@ -21,7 +21,6 @@ const AppLayout = ({ children }) => {
     }
   }, []);
 
-  useEffect(() => {}, []);
   return (
     <div>
       <Row>

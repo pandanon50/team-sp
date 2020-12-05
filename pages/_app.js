@@ -3,13 +3,9 @@ import PropTypes from "prop-types";
 import "antd/dist/antd.css";
 import "../src/scss/styles.scss";
 import Head from "next/head";
-//import LoginForm from "../components/LoginForm";
 import wrapper from "../store/configureStore";
-//import { useSelector } from "react-redux";
 import withReduxSaga from "next-redux-saga";
 const ToDoApp = ({ Component }) => {
-  //const { isLoggedIn } = useSelector((state) => state.user);
-
   return (
     <>
       <Head>

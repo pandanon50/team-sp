@@ -2,7 +2,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 module.exports = withBundleAnalyzer({
-  compress: true, //CompressionPlugin()
+  distDir: ".next",
   webpack(config, { webpack }) {
     const prod = process.env.NODE_ENV === "production";
     const plugins = [
