@@ -3,6 +3,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 module.exports = withBundleAnalyzer({
   distDir: ".next",
+  pageExtensions: ["mdx", "jsx", "js", "ts", "tsx"],
   webpack(config, { webpack }) {
     const prod = process.env.NODE_ENV === "production";
     const plugins = [
