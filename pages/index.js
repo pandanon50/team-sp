@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AppLayout from "../components/AppLayout.js";
+import AppLayout from "../components/AppLayout";
 import TodoItem from "../components/TodoItem";
 import TodoForm from "../components/TodoForm";
 import axios from "axios";

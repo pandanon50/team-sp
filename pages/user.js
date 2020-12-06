@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useEffect } from "react";
 import useInput from "../hooks/useInput";
-import AppLayout from "../components/Applayout";
+import AppLayout from "../components/AppLayout";
 import HEAD from "next/head";
 import styled from "styled-components";
 import LoginForm from "../components/LoginForm";
