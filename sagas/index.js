@@ -4,6 +4,7 @@ import axios from "axios";
 import postSaga from "./post";
 import userSaga from "./user";
 import goalSaga from "./goal";
+import { backUrl } from "../config/config";
 
 // all input(배열) - > 배열안에 모든 것을 실행
 // fork fork는 함수를 실행 동기 함수 호출
@@ -13,7 +14,7 @@ import goalSaga from "./goal";
 //takeEvery  -> while(true) 를 대체 take는 한번만 실행! (최초실행후 제너레이터 동작 X)
 // takeLatest -> 마지막의 수행되는 제너레이터만 실행한다(실수로 2~3번 눌렀을 때) (이미 완료된 것은 제외, 동시에 로딩중인것만 앞에 것을 취소)
 
-axios.defaults.baseURL = "http://localhost:3065";
+axios.defaults.baseURL = `${backUrl}`;
 
 axios.defaults.withCredentials = true; // COOKIE 허용하겠다
 

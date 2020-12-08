@@ -15,6 +15,7 @@ import { HomeOutlined, AudioOutlined, UserOutlined } from "@ant-design/icons";
 import { SpeechText } from "../Speech/Text2Speech";
 import Router from "next/router";
 import Axios from "axios";
+import { backUrl } from "../config/config";
 
 const Footer = () => {
   const dispatch = useDispatch();
